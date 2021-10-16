@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StartDate = new System.Windows.Forms.TextBox();
-            this.EndDate = new System.Windows.Forms.TextBox();
             this.Input = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,29 +37,19 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
+            this.ResultTable = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.DateTimeStart = new System.Windows.Forms.DateTimePicker();
+            this.DateTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // StartDate
-            // 
-            this.StartDate.Location = new System.Drawing.Point(39, 59);
-            this.StartDate.Name = "StartDate";
-            this.StartDate.Size = new System.Drawing.Size(113, 20);
-            this.StartDate.TabIndex = 0;
-            // 
-            // EndDate
-            // 
-            this.EndDate.Location = new System.Drawing.Point(203, 59);
-            this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(107, 20);
-            this.EndDate.TabIndex = 1;
             // 
             // Input
             // 
             this.Input.Location = new System.Drawing.Point(39, 139);
             this.Input.Multiline = true;
             this.Input.Name = "Input";
-            this.Input.Size = new System.Drawing.Size(279, 122);
+            this.Input.Size = new System.Drawing.Size(254, 122);
             this.Input.TabIndex = 2;
             this.Input.TextChanged += new System.EventHandler(this.Input_TextChanged);
             // 
@@ -85,12 +73,13 @@
             // 
             // report
             // 
-            this.report.Location = new System.Drawing.Point(403, 55);
+            this.report.Location = new System.Drawing.Point(354, 59);
             this.report.Name = "report";
-            this.report.Size = new System.Drawing.Size(75, 23);
+            this.report.Size = new System.Drawing.Size(104, 31);
             this.report.TabIndex = 5;
             this.report.Text = "Отчет";
             this.report.UseVisualStyleBackColor = true;
+            this.report.Click += new System.EventHandler(this.report_Click);
             // 
             // menuStrip1
             // 
@@ -114,14 +103,14 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(110, 22);
             this.importToolStripMenuItem.Text = "Import";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
@@ -134,18 +123,52 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Ввод данных";
             // 
+            // ResultTable
+            // 
+            this.ResultTable.Location = new System.Drawing.Point(351, 139);
+            this.ResultTable.Multiline = true;
+            this.ResultTable.Name = "ResultTable";
+            this.ResultTable.Size = new System.Drawing.Size(243, 122);
+            this.ResultTable.TabIndex = 8;
+            this.ResultTable.TextChanged += new System.EventHandler(this.ResultTable_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(351, 120);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Результат времени";
+            // 
+            // DateTimeStart
+            // 
+            this.DateTimeStart.Location = new System.Drawing.Point(39, 69);
+            this.DateTimeStart.Name = "DateTimeStart";
+            this.DateTimeStart.Size = new System.Drawing.Size(133, 20);
+            this.DateTimeStart.TabIndex = 10;
+            // 
+            // DateTimeEnd
+            // 
+            this.DateTimeEnd.Location = new System.Drawing.Point(191, 68);
+            this.DateTimeEnd.Name = "DateTimeEnd";
+            this.DateTimeEnd.Size = new System.Drawing.Size(134, 20);
+            this.DateTimeEnd.TabIndex = 11;
+            // 
             // PhoneSpam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 314);
+            this.Controls.Add(this.DateTimeEnd);
+            this.Controls.Add(this.DateTimeStart);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ResultTable);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.report);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Input);
-            this.Controls.Add(this.EndDate);
-            this.Controls.Add(this.StartDate);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PhoneSpam";
@@ -171,6 +194,10 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox ResultTable;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker DateTimeStart;
+        private System.Windows.Forms.DateTimePicker DateTimeEnd;
     }
 }
 
