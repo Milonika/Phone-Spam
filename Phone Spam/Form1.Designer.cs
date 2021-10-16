@@ -1,6 +1,6 @@
 ﻿namespace Phone_Spam
 {
-    partial class Form1
+    partial class PhoneSpam
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,43 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.StartDate = new System.Windows.Forms.TextBox();
+            this.EndDate = new System.Windows.Forms.TextBox();
+            this.Input = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.report = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // StartDate
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.StartDate.Location = new System.Drawing.Point(39, 59);
+            this.StartDate.Name = "StartDate";
+            this.StartDate.Size = new System.Drawing.Size(113, 20);
+            this.StartDate.TabIndex = 0;
             // 
-            // textBox2
+            // EndDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(297, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.EndDate.Location = new System.Drawing.Point(203, 59);
+            this.EndDate.Name = "EndDate";
+            this.EndDate.Size = new System.Drawing.Size(107, 20);
+            this.EndDate.TabIndex = 1;
             // 
-            // textBox3
+            // Input
             // 
-            this.textBox3.Location = new System.Drawing.Point(118, 139);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(279, 122);
-            this.textBox3.TabIndex = 2;
+            this.Input.Location = new System.Drawing.Point(39, 139);
+            this.Input.Multiline = true;
+            this.Input.Name = "Input";
+            this.Input.Size = new System.Drawing.Size(279, 122);
+            this.Input.TabIndex = 2;
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(36, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Дата начала периода:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(188, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Дата окончания периода:";
+            // 
+            // report
+            // 
+            this.report.Location = new System.Drawing.Point(403, 55);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(75, 23);
+            this.report.TabIndex = 5;
+            this.report.Text = "Отчет";
+            this.report.UseVisualStyleBackColor = true;
+            // 
+            // PhoneSpam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 353);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(638, 314);
+            this.Controls.Add(this.report);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Input);
+            this.Controls.Add(this.EndDate);
+            this.Controls.Add(this.StartDate);
+            this.Name = "PhoneSpam";
+            this.Text = "Phone Spam";
+            this.Load += new System.EventHandler(this.PhoneSpam_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,9 +106,12 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox StartDate;
+        private System.Windows.Forms.TextBox EndDate;
+        private System.Windows.Forms.TextBox Input;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button report;
     }
 }
 

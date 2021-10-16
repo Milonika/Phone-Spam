@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Phone_Spam
 {
-    public partial class Form1 : Form
+    public partial class PhoneSpam : Form
     {
-        public Form1()
+        public PhoneSpam()
         {
             InitializeComponent();
+        }
+
+        private void PhoneSpam_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
