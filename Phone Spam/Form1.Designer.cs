@@ -147,6 +147,7 @@
             this.DateTimeStart.Name = "DateTimeStart";
             this.DateTimeStart.Size = new System.Drawing.Size(133, 20);
             this.DateTimeStart.TabIndex = 10;
+            this.DateTimeStart.ValueChanged += new System.EventHandler(this.DateTimeStart_ValueChanged);
             // 
             // DateTimeEnd
             // 

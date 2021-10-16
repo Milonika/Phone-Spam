@@ -104,5 +104,12 @@ namespace Phone_Spam
         {
 
         }
+
+        private void DateTimeStart_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DataStart = DateTimeStart.Value.Date + DateTimeStart.Value.TimeOfDay;
+            DateTime DataEnd = DateTimeEnd.Value.Date + DateTimeEnd.Value.TimeOfDay;
+        }
+        //struct 
     }
 }
