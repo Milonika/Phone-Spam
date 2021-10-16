@@ -25,16 +25,6 @@ namespace Phone_Spam
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openTableAsTXT = new OpenFileDialog();
-            openTableAsTXT.Filter = "Документ TXT (*.txt) |*.txt";
-            if (openTableAsTXT.ShowDialog() == DialogResult.OK)
-            {
-                Input.Text = File.ReadAllText(openTableAsTXT.FileName, Encoding.Default);
-            }
-        }
-
-        private void importToolStripMenuItem_Click(object sender, EventArgs e)
-        {
             SaveFileDialog saveTable = new SaveFileDialog();
             saveTable.Filter = "Документ TXT (*.txt) |*.txt";
             if (saveTable.ShowDialog() == DialogResult.OK)
@@ -48,6 +38,16 @@ namespace Phone_Spam
                     sw.Close();
                 }
                 catch { }
+            }
+        }
+
+        private void importToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openTableAsTXT = new OpenFileDialog();
+            openTableAsTXT.Filter = "Документ TXT (*.txt) |*.txt";
+            if (openTableAsTXT.ShowDialog() == DialogResult.OK)
+            {
+                Input.Text = File.ReadAllText(openTableAsTXT.FileName, Encoding.Default);
             }
         }
 
